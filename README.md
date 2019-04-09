@@ -1,5 +1,8 @@
 # Weather App
+
 ### Simple weather app built with React
+
+### [Demo](https://eliweatherapp.herokuapp.com/)
 
 ## How to use:
 
@@ -7,17 +10,16 @@
 
 `git clone https://github.com/sherialeliasjawed/weatherapp.git`
 
-- Install dependencies 
+- Install dependencies
 
 `yarn`
 
 - Update Openweathermap API key
 
-`src/App.js - Line 7:
-const API_KEY`
+`src/App.js - Line 7: const API_KEY`
 
 - Start yarn
 
 `yarn start`
 
-Enjoy!  
+Enjoy!
