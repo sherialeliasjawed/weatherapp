@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 body {
-  background-color: rgb(242, 237, 162);
+  background-color: rgb(255, 174, 0);
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
   max-width: 1500px;
   margin: auto;
   display: grid;
-  grid-template-columns: minmax(auto, auto) minmax(500px, auto);
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     'title form'
     'title weather';
@@ -52,10 +52,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  width: 100%;
 }
 
 .form-container form {
+  width: 80%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -67,11 +68,9 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  font-size: 20px;
-  font-weight: 200;
   letter-spacing: 2px;
   height: 100%;
+  font-size: 20px;
 }
 
 input[type='text'] {
@@ -115,13 +114,6 @@ button:active {
   outline: none;
 }
 
-.weather__info {
-  width: 60%;
-  font-size: 20px;
-  font-weight: 200;
-  letter-spacing: 2px;
-}
-
 .weather__key {
   color: #f16051;
   border-bottom: solid 2px rgba(255, 255, 255, 0.06);
@@ -149,15 +141,32 @@ button:active {
   .container {
     height: 100vh;
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .container {
-    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
       'title title'
       'form form'
       'weather weather';
+  }
+
+  .weather-container {
+    font-size: 14px;
+  }
+
+  .form-container {
+    margin-top: 20px;
+  }
+
+  input[type='text'] {
+    border-bottom: solid 1px #f16051;
+    color: #fff !important;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  button {
+    border: 0;
+    padding: 4px 4px;
+    font-size: 14px;
   }
 }
