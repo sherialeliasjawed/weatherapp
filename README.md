@@ -4,6 +4,7 @@
 ## How to use:
 
 - Clone this repository
+
 `git clone https://github.com/sherialeliasjawed/weatherapp.git`
 
 - Install dependencies 
@@ -16,7 +17,7 @@
 const API_KEY`
 
 - Start yarn
- 
+
 `yarn start`
 
 Enjoy!  

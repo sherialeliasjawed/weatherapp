@@ -26,6 +26,7 @@ class App extends Component {
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
 
+    // Api call to OpenWeatherMap's API.
     const api_call = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
     );
@@ -41,11 +42,13 @@ class App extends Component {
         humidity: data.main.humidity,
         wind: data.wind.speed,
         description: data.weather[0].description,
+        // Using OWFont (css/owfont-*) classnames to replace standard icons provided by OpenWeatherMap's API.
         icon: `owf owf-${data.weather[0].id} owf-5x`,
         error: false
       });
     } else {
       this.setState({
+        // Reset state and trigger error if invalid response.
         city: undefined,
         country: undefined,
         temp: undefined,

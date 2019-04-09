@@ -3,6 +3,7 @@ import React from 'react';
 const Weather = props => {
   return (
     <div className="weather-container">
+      {/* Rendering items conditionally based on whether the prop exists in the application's state. */}
       {props.icon && <div className={props.icon} />}
       {props.city && props.country && (
         <p className="weather__key">
@@ -46,6 +47,8 @@ const Weather = props => {
           Wind: <span className="weather__value">{props.wind}mph</span>
         </p>
       )}
+
+      {/* Render an error if error in state is flagged true. */}
       {props.error && (
         <p className="weather__error">
           Invalid input, please enter a valid city and country name.
