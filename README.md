@@ -2,7 +2,7 @@
 
 ### Simple weather app built with React
 
-### [Demo](https://eliweatherapp.herokuapp.com/)
+### [Demo](http://eliweatherapp.herokuapp.com/)
 
 ## How to use:
 
